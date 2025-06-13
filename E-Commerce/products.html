@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | FurniCo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🪑 FurniCo</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button onclick="toggleDarkMode()" class="dark-toggle">🌓</button>
+        <a href="cart.html" class="cart-btn">🛒 Cart</a>
+        <a href="login.html" class="auth-btn">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="chair">Chairs</option>
+        <option value="sofa">Sofas</option>
+        <option value="table">Tables</option>
+      </select>
+    </div>
+
+    <div id="productGrid" class="product-grid">
+      <!-- Product items -->
+      <div class="product-card" data-category="chair">
+        <img src="https://images.unsplash.com/photo-1583267747811-2b0f79f4fa64" alt="Modern Chair">
+        <h3>Elegant Wooden Chair</h3>
+        <p>$120</p>
+        <button onclick="addToCart('Elegant Wooden Chair', 120)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="sofa">
+        <img src="https://images.unsplash.com/photo-1598300053655-2d1dbb2e52dc" alt="Comfort Sofa">
+        <h3>Comfort Sofa</h3>
+        <p>$340</p>
+        <button onclick="addToCart('Comfort Sofa', 340)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="table">
+        <img src="https://images.unsplash.com/photo-1601979031925-3ccdebd7c89e" alt="Dining Table">
+        <h3>Modern Dining Table</h3>
+        <p>$250</p>
+        <button onclick="addToCart('Modern Dining Table', 250)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FurniCo. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="darkmode.js"></script>
+</body>
+</html>
